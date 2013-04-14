@@ -24,7 +24,7 @@ class Mem():
                 mem.append(meminfo[key + 1])
         return mem
 
-    def get_mem_info(self):
+    def get_stats(self):
         return self.__mem_current__()
 
 if __name__ == '__main__':

@@ -18,7 +18,7 @@ class CPU():
     def __str__(self):
         return "%s %s %s" % self.__cpu_percent__()
 
-    def get_load_average(self):
+    def get_stats(self):
         return self.__cpu_percent__()
 
 if __name__ == '__main__':
