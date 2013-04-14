@@ -1,5 +1,4 @@
 import os
-from itertools import izip
 
 class Mem():
     """ Class to get the total memory usage, free memory, buffered and
