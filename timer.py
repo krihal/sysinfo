@@ -1,11 +1,3 @@
-#
-# Loadable module exceptions
-#
-class ModuleAlreadyLoaded(Exception): pass
-class ModuleNotLoaded(Exception): pass
-class ModuleNotFound(Exception): pass
-class ModuleError(Exception): pass
-
 from threading import Timer
 
 #

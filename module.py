@@ -3,6 +3,14 @@ import sys
 import imp
 
 #
+# Loadable module exceptions
+#
+class ModuleAlreadyLoaded(Exception): pass
+class ModuleNotLoaded(Exception): pass
+class ModuleNotFound(Exception): pass
+class ModuleError(Exception): pass
+
+#
 # Loadable module class 
 #
 class Module():
@@ -29,7 +37,7 @@ class Module():
         if self.__loaded(name):
             raise ModuleAlreadyLoaded
         self.modules[name] = imp.load_module(name, *imp.find_module(name, [self.path]))
-        return self.modules[name].main
+        return self.modules[name]
 
     def unload(self, name):
         if self.__loaded(name) == False:
