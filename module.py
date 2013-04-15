@@ -48,11 +48,18 @@ class Module():
     
     def get_instance(self, name):
         # Modules are not supposed to contain more than one class
-        members = inspect.getmembers(self.modules[name])
+        try:
+            members = inspect.getmembers(self.modules[name])
+        except KeyError, e:
+            return None
         for k, v in members:
-            print k
+            if name + "class" in k.lower():
+                instance = v
+                return v()
+        return None
 
 if __name__ == '__main__':
     m = Module('adapters/')
     m.load('net')
-    m.get_instance('net')
+    i = m.get_instance('net')
+    print i.get_stats('wlan0')
