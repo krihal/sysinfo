@@ -1,6 +1,6 @@
 import os
 
-class Mem():
+class MemClass():
     """ Class to get the total memory usage, free memory, buffered and
     cached memory. """
 

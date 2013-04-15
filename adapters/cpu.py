@@ -1,6 +1,6 @@
 import os
 
-class CPU():
+class CPUClass():
     """ CPU adapter, return the average CPU load for the 15, 10 and 5
     last minutes. """
 
