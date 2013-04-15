@@ -18,8 +18,8 @@ class NetClass():
             stats.append(dev_stat.rstrip('\n'))
         return stats
 
-    def get_stats(self, dev):
-        return self.__get_stats__(dev)
+    def get_stats(self):
+        return self.__get_stats__('wlan0')
 
 if __name__ == '__main__':
     n = Net()
