@@ -1,6 +1,7 @@
 import os
 import sys
 import imp
+import inspect
 
 #
 # Loadable module exceptions
@@ -44,3 +45,14 @@ class Module():
             raise ModuleNotLoaded
         del self.modules[name]
         return self.modules    
+    
+    def get_instance(self, name):
+        # Modules are not supposed to contain more than one class
+        members = inspect.getmembers(self.modules[name])
+        for k, v in members:
+            print k
+
+if __name__ == '__main__':
+    m = Module('adapters/')
+    m.load('net')
+    m.get_instance('net')
