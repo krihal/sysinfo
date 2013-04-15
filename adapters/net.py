@@ -1,6 +1,6 @@
 import os
 
-class Net():
+class NetClass():
     """ Class to get network interface statistics. """
 
     def __init__(self):
