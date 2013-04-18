@@ -4,4 +4,4 @@ adapters = dict()
 #                 "file": "cpu"}
 adapters['net'] = {"net": "net", 
                  "file": "net",
-                 "interval": 5}
+                 "interval": 1}
